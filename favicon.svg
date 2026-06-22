@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Jayan</title>
+  <defs>
+    <linearGradient id="tile" x1="3" x2="61" y1="3" y2="61" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08b9d6"/>
+      <stop offset="0.52" stop-color="#0aa3c1"/>
+      <stop offset="1" stop-color="#16a394"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="15" x2="49" y1="10" y2="53" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0.42"/>
+      <stop offset="0.46" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.6" flood-color="#02101a" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+
+  <rect width="64" height="64" rx="16" fill="url(#tile)"/>
+  <path d="M11 49 49 11c5.7 6.4 8.8 15.8 6.4 25.2C52.3 48.7 40.6 57 28 56.2c-6.5-.4-12.4-3-17-7.2Z" fill="url(#shine)"/>
+
+  <path
+    d="M45 17H28m11 0v23.6c0 7.3-5.4 11.7-12.4 10.3-4.2-.8-7-3.4-7.8-7.4"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#soft)"
+  />
+  <path
+    d="M16 24c8.9-8.4 27.7-9.4 37.3.2"
+    fill="none"
+    stroke="#dff8f5"
+    stroke-width="2.4"
+    stroke-linecap="round"
+    opacity="0.86"
+  />
+  <circle cx="51" cy="25" r="3.3" fill="#ffffff"/>
+  <circle cx="51" cy="25" r="1.45" fill="#08b9d6"/>
+</svg>

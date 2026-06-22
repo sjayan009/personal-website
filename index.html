@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jayan's Portfolio</title>
+    <meta
+      name="description"
+      content="Jayan's software engineering portfolio: projects, experience, skills, education, and contact."
+    />
+    <meta name="theme-color" content="#f7fbff" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="brand" href="#home">Jayan</a>
+
+      <div class="nav-pill" aria-label="Section links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a class="nav-cta" href="#contact">Contact Me</a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <canvas class="lightfield" id="lightfield" aria-hidden="true"></canvas>
+        <div class="beam beam-vertical" aria-hidden="true"></div>
+        <div class="orbital" aria-hidden="true">
+          <span class="planet"></span>
+          <span class="ring ring-a"></span>
+          <span class="ring ring-b"></span>
+          <span class="ring ring-c"></span>
+          <span class="spark spark-a"></span>
+          <span class="spark spark-b"></span>
+        </div>
+
+        <div class="hero-content reveal">
+          <p class="hero-badge">
+            <span> CS Student &middot; Applied AI/ML &middot; Data Products</span>
+          </p>
+          <h1 id="hero-title">
+            I&apos;m <span>Jayan!</span>
+          </h1>
+          <p class="hero-copy">
+            I build reliable AI systems, data products, and full-stack tools
+            that turn complex information into clear, useful decisions.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View My Work</a>
+            <a class="button button-secondary" href="#about">Learn More</a>
+          </div>
+          <div class="hero-stats" aria-label="Portfolio stats">
+            <div>
+              <strong>4</strong>
+              <span>Featured Projects</span>
+            </div>
+            <div>
+              <strong>2+</strong>
+              <span>Years Building</span>
+            </div>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#about" aria-label="Scroll to about">
+          <span>SCROLL</span>
+          <i></i>
+        </a>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="wrap">
+          <header class="section-heading reveal">
+            <p>ABOUT ME</p>
+            <h2 id="about-title">Passionate Developer & Problem Solver.</h2>
+          </header>
+
+          <div class="about-layout">
+            <div class="portrait-card reveal">
+              <img class="portrait-image" src="assets/images/portrait.jpeg" alt="Portrait of Jayan" />
+            </div>
+
+            <div class="about-copy reveal" data-delay="1">
+              <p>
+                I’m a Computer Science student at Georgia Tech focused on building reliable AI systems, data products, 
+                and full-stack tools that turn complex, unstructured information into decisions people can trust.
+              </p>
+              <p>
+                My work spans scientific literature extraction, genomics machine learning, knowledge-graph design, 
+                and enterprise AI workflows. Across each project, I am drawn to the same challenge: 
+                making powerful technical systems more useful, traceable, and practical for 
+                the people who depend on them.
+              </p>
+              <p>
+                I’m especially interested in applied AI engineering, ML systems, research tools, 
+                and products that make difficult work easier to understand and act on. 
+                I enjoy working through ambiguous problems, learning quickly, 
+                and turning early ideas into systems with clear value in the real world.
+              </p>
+              <blockquote>
+                &ldquo;It's better to say 'I did it' than I wish I had.&rdquo;
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="wrap">
+          <header class="section-heading reveal">
+            <p>PORTFOLIO</p>
+            <h2 id="projects-title">Featured Projects</h2>
+            <span>
+              Selected work with clear outcomes, technical choices, and links
+              recruiters can scan quickly.
+            </span>
+          </header>
+
+          <div class="project-tools reveal">
+            <label class="search-box" for="project-search">
+              <span aria-hidden="true">⌕</span>
+              <input id="project-search" type="search" placeholder="Search projects..." />
+            </label>
+            <div class="filter-buttons" aria-label="Project filters">
+              <button class="filter is-active" type="button" data-filter="all">All Projects</button>
+              <button class="filter" type="button" data-filter="current">Current</button>
+              <button class="filter" type="button" data-filter="past">Past</button>
+              <button class="filter" type="button" data-filter="ai">AI</button>
+            </div>
+          </div>
+
+          <div class="project-grid" id="project-grid">
+            <article class="project-card reveal" data-category="current ai" data-title="BioBarrier Literature Extraction Pipeline Georgia Tech Grover Lab">
+              <div class="project-preview preview-one">
+                <img class="project-preview-image" src="assets/images/grover-lab.png" alt="paper-to-dataset extraction workflow" />
+              </div>
+              <div class="project-content">
+                <h3>BioBarrier Literature Extraction Pipeline</h3>
+                <p>
+                  Improving a regex + RAG pipeline that converts bio-based
+                  barrier-materials papers into validated MongoDB records,
+                  capturing five additional experimental fields per paper.
+                </p>
+                <div class="chips">
+                  <span>Python</span>
+                  <span>RAG</span>
+                  <span>Regex</span>
+                  <span>MongoDB</span>
+                  <span>TypeScript</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="past ai" data-title="Tumor Gene Expression Classifier The Jackson Laboratory for Genomic Medicine">
+              <div class="project-preview preview-two">
+                <img class="project-preview-image" src="assets/images/tge.png" alt="Cancer classification performance analysis" />
+              </div>
+              <div class="project-content">
+                <h3>Tumor Gene Expression Classifier</h3>
+                <p>
+                  Built an XGBoost + PCA model that reached 98.5% accuracy
+                  across 33 cancer types using 16,000 gene-expression profiles,
+                  then analyzed cross-species transfer gaps and model-error drivers.
+                </p>
+                <div class="chips">
+                  <span>Python</span>
+                  <span>XGBoost</span>
+                  <span>PCA</span>
+                  <span>Genomics</span>
+                  <span>Model Evaluation</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="current ai" data-title="SmartPath AI Knowledge Graph SmartPathAI Big Data Big Impact">
+              <div class="project-preview preview-three">
+                <img class="project-preview-image" src="assets/images/smartpath-ai.png" alt="Personalized learning-path graph" />
+              </div>
+              <div class="project-content">
+                <h3>SmartPath AI Knowledge Graph</h3>
+                <p>
+                  Redesigned the learning-path knowledge graph for a platform
+                  serving 20,000+ Georgia Tech students, reducing graph redundancy
+                  by 40% through node deduplication and center-based navigation.
+                </p>
+                <div class="chips">
+                  <span>Knowledge Graphs</span>
+                  <span>Node.js</span>
+                  <span>Graph Design</span>
+                  <span>Personalization</span>
+                  <span>EdTech</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="past ai" data-title="NeuralSeek AI Research Agent">
+              <div class="project-preview preview-four">
+                <img class="project-preview-image" src="assets/images/watsonx.png" alt="research-agent retrieval workflow" />
+              </div>
+              <div class="project-content">
+                <h3>Research Agent</h3>
+                <p>
+                  Built a WatsonX-powered research agent that uses OCR,
+                  retrieval, and prompt workflows to extract, rank, and summarize
+                  relevant papers, cutting literature-search time from hours to minutes.
+                </p>
+                <div class="chips">
+                  <span>WatsonX</span>
+                  <span>OCR</span>
+                  <span>Retrieval</span>
+                  <span>LLMs</span>
+                  <span>AI Agents</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="wrap narrow">
+          <header class="section-heading reveal">
+            <p>CAREER</p>
+            <h2 id="experience-title">Work Experience</h2>
+          </header>
+
+          <div class="timeline">
+            <article class="timeline-card reveal">
+              <div class="timeline-dot"></div>
+              <h3>AI & Modernization Intern</h3>
+              <p class="meta">PowerPlan · May 2026 - Aug 2026</p>
+              <p>
+                Built a Python/FastAPI policy-validation service and LangGraph
+                workflow that reduced manual review time by 15% and improved
+                miscapitalization detection for enterprise financial asset-management software.
+              </p>
+            </article>
+
+            <article class="timeline-card reveal">
+              <div class="timeline-dot"></div>
+              <h3>Undergraduate Research Assistant: Bio Based Barrier Materials</h3>
+              <p class="meta">Georgia Tech Grover Lab · May 2026 - Present</p>
+              <p>
+                Improving a literature-extraction system for bio-based barrier
+                materials by mapping ingestion, retrieval, parsing, validation,
+                and MongoDB schema flows to increase structured-data reliability.
+              </p>
+            </article>
+
+            <article class="timeline-card reveal">
+              <div class="timeline-dot"></div>
+              <h3>Research Assistant: Tumor Gene Expression</h3>
+              <p class="meta">The Jackson Laboratory for Genomic Medicine · Oct 2024 - Dec 2025</p>
+              <p>
+                Developed a 98.5%-accurate XGBoost/PCA cancer classifier across
+                33 tumor types and analyzed cross-species transfer gaps using
+                per-class metrics and error-association analysis.
+              </p>
+            </article>
+
+            <article class="timeline-card reveal">
+              <div class="timeline-dot"></div>
+              <h3>AI Agent Builder Intern</h3>
+              <p class="meta">NeuralSeek · Aug 2025 - Sep 2025</p>
+              <p>
+                Built a WatsonX-powered research agent combining OCR, retrieval,
+                and prompt workflows to extract, rank, and summarize papers by topic.
+              </p>
+            </article>
+
+            <article class="timeline-card reveal">
+              <div class="timeline-dot"></div>
+              <h3>Python Data Analytics & AI Prompt Engineering Intern</h3>
+              <p class="meta">developerDB / cruiter.ai · Jul 2025 - Aug 2025</p>
+              <p>
+                Built Python and SQL analytics pipelines across a 40M+
+                candidate-profile database, reducing candidate-placement
+                decision time by 30%.
+              </p>
+            </article>
+
+            <article class="timeline-card reveal">
+              <div class="timeline-dot"></div>
+              <h3>Research Assistant: Web Robot Detection</h3>
+              <p class="meta">Central Connecticut State University · May 2023 - May 2024</p>
+              <p>
+                Researched web-robot detection approaches and supported
+                data-driven analysis of automated versus human web activity.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="wrap">
+          <header class="section-heading reveal">
+            <p>EXPERTISE</p>
+            <h2 id="skills-title">Technical Proficiency</h2>
+            <span>
+              A quick scan of the tools I use most often across products,
+              prototypes, coursework, and research.
+            </span>
+          </header>
+
+          <div class="skills-grid">
+            <article class="skill-panel reveal">
+              <h3>Languages</h3>
+                <div class="chips">
+                  <span>Python</span>
+                  <span>TypeScript</span>
+                  <span>Java</span>
+                  <span>JavaScript</span>
+                  <span>SQL</span>
+                  <span>R</span>
+                  <span>HTML</span>
+                </div>
+            </article>
+
+            <article class="skill-panel reveal" data-delay="1">
+              <h3>Frontend</h3>
+                <div class="chips">
+                  <span>React</span>
+                  <span>Next.js</span>
+                  <span>Vite</span>
+                  <span>Tailwind</span>
+                  <span>Framer Motion</span>
+                  <span>Streamlit</span>
+                </div>
+            </article>
+
+            <article class="skill-panel reveal" data-delay="2">
+              <h3>Backend &amp; Data</h3>
+                <div class="chips">
+                  <span>FastAPI</span>
+                  <span>Express</span>
+                  <span>Pydantic</span>
+                  <span>Supabase</span>
+                  <span>PostgreSQL</span>
+                  <span>MongoDB</span>
+                  <span>MySQL</span>
+                  <span>Neo4j</span>
+                  <span>Elasticsearch</span>
+                  <span>Stripe</span>
+                </div>
+            </article>
+
+            <article class="skill-panel reveal" data-delay="2">
+              <h3>AI, ML &amp; Agents</h3>
+                <div class="chips">
+                  <span>LangGraph</span>
+                  <span>RAG</span>
+                  <span>Gemini</span>
+                  <span>ChatGPT</span>
+                  <span>Claude</span>
+                  <span>Pandas</span>
+                  <span>NumPy</span>
+                  <span>XGBoost</span>
+                </div>
+            </article>
+
+            <article class="skill-panel reveal" data-delay="2">
+              <h3>Cloud &amp; Tools</h3>
+                <div class="chips">
+                  <span>AWS</span>
+                  <span>Docker</span>
+                  <span>Git</span>
+                  <span>Vercel</span>
+                  <span>VS Code</span>
+                </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="education" aria-labelledby="education-title">
+        <div class="wrap narrow">
+          <header class="section-heading reveal">
+            <p>ACADEMIC</p>
+            <h2 id="education-title">Education &amp; Achievements</h2>
+          </header>
+
+          <article class="education-card reveal">
+            <div class="school-mark">CS</div>
+            <div class="school-main">
+              <h3>Georgia Institute of Technology</h3>
+              <p>B.S. Computer Science</p>
+              <div class="school-meta">
+                <span>Expected Fall 2028</span>
+                <span>GPA: 3.7/4.0</span>
+              </div>
+              <div class="award-list">
+                <h4>Honors &amp; Awards</h4>
+                <span>Dean's List</span>
+              </div>
+            </div>
+            <div class="coursework">
+              <h4>Relevant Coursework</h4>
+              <ul>
+                <li>Data Structures and Algorithms</li>
+                <li>Object Oriented Programming</li>
+                <li>Discrete Math</li>
+                <li>Multivariable Calculus</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="wrap contact-wrap">
+          <header class="section-heading reveal">
+            <p>CONNECT</p>
+            <h2 id="contact-title">Let&apos;s build something useful.</h2>
+            <span>
+              Open to internships, research collaborations, and teams building
+              practical software with a clear user need.
+            </span>
+          </header>
+
+          <div class="contact-card reveal">
+            <div>
+              <h3>Get In Touch</h3>
+              <p>
+                Send a note directly from here and I&apos;ll get it in my inbox.
+              </p>
+              <form class="contact-form" id="contact-form">
+                <label for="contact-name">
+                  <span>Name</span>
+                  <input id="contact-name" name="name" type="text" autocomplete="name" required />
+                </label>
+                <label for="contact-email">
+                  <span>Email</span>
+                  <input id="contact-email" name="email" type="email" autocomplete="email" required />
+                </label>
+                <label class="honeypot" for="contact-website" aria-hidden="true">
+                  <span>Website</span>
+                  <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+                </label>
+                <label for="contact-message">
+                  <span>Message</span>
+                  <textarea id="contact-message" name="message" rows="5" required></textarea>
+                </label>
+                <button class="button button-primary" type="submit">Send Message</button>
+                <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+            <div>
+              <h3>Connect Online</h3>
+              <div class="social-grid">
+                <a href="https://github.com/sjayan009" target="_blank"> GitHub</a>
+                <a href="https://www.linkedin.com/in/jayan-sirikonda" target="_blank">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Jayan. Built for clarity, warmth, and useful work.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
