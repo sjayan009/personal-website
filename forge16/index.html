@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#090e1c"/>
+<meta name="description" content="Forge16 — your 16-week LeetCode and AI-assisted interview mastery system."/>
+<title>FORGE16 — The mastery protocol</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230c1324'/%3E%3Cpath d='M16 44L30 16H47L34 35H46L35 48H18L30 30H22Z' fill='%23c7f36b'/%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="./styles.css"/>
+<script defer src="./data.js"></script>
+<script defer src="./app.js"></script>
+</head>
+<body>
+<div id="app">
+ <aside class="sidebar" id="sidebar">
+   <div class="brand"><div class="brand-icon">↗</div><div class="brand-name">FORGE<span>16</span><small>THE MASTERY PROTOCOL</small></div></div>
+   <div class="nav-label">WORKSPACE</div>
+   <nav class="nav">
+    <button class="nav-item active" data-view="dashboard"><span class="ico">◫</span> Command center <span class="nav-kbd">G</span></button>
+    <button class="nav-item" data-view="week"><span class="ico">▦</span> Weekly plan</button>
+    <button class="nav-item" data-view="problems"><span class="ico">⌘</span> Problem vault <span class="nav-count" id="navProblemCount">136</span></button>
+    <button class="nav-item" data-view="interviews"><span class="ico">◇</span> Interview arena</button>
+    <button class="nav-item" data-view="ai"><span class="ico">✳</span> AI projects</button>
+    <button class="nav-item" data-view="progress"><span class="ico">◉</span> Analytics</button>
+   </nav>
+   <div class="nav-label nav-label-second">YOUR PROTOCOL</div>
+   <div class="sidebar-program">
+     <div class="sidebar-program-top"><span class="pulse-dot"></span> ACTIVE PROGRAM</div>
+     <div class="sidebar-program-title">16 weeks to<br><strong>interview ready.</strong></div>
+     <div class="sidebar-bar"><span id="sidebarProgressBar"></span></div>
+     <div class="sidebar-program-bottom"><span id="sidebarProgressText">0% complete</span><span>MAR 14 ’27</span></div>
+   </div>
+   <div class="sidebar-bottom">
+    <button class="sidebar-action" id="sidebarExport"><span>⇩</span> Export progress</button>
+    <button class="sidebar-action" id="sidebarImport"><span>⇧</span> Restore progress</button>
+    <div class="sidebar-user"><div class="user-avatar">JS</div><div><strong>Jayan's workspace</strong><span>Private in this browser</span></div><span class="user-more">•••</span></div>
+   </div>
+ </aside>
+ <div class="mobile-scrim" id="mobileScrim"></div>
+ <main class="main">
+  <header class="topbar"><div class="top-left"><button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button><span class="top-kicker">THE WORK /</span><span id="viewCrumb">COMMAND CENTER</span></div><div class="top-actions"><span class="top-date" id="todayDate"></span><span class="top-sep"></span><button class="icon-button" id="searchTrigger" title="Search tasks (/)">⌕ <span>/</span></button><button class="avatar-top" title="Your workspace">JS</button></div></header>
+  <div id="content" class="content"></div>
+ </main>
+</div>
+<div class="modal-layer hidden" id="modalLayer"><div class="modal-scrim" data-close="1"></div><section class="modal" id="modalContent" role="dialog" aria-modal="true" aria-label="Task details"></section></div>
+<div class="toast-wrap" id="toasts" aria-live="polite"></div>
+<input hidden type="file" id="importFile" accept="application/json,.json"/>
+</body>
+</html>
